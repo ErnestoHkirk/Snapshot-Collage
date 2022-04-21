@@ -9,13 +9,12 @@ const port = process.env.PORT || 5000;
 // app.get("/", (req, res) => {
 //   res.send("Hello World!");
 // });
-
+const path = require("path");
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("build"));
+  app.use(express.static(path.join(__dirname, "client/build")));
   app.get("*"),
     (req, res) => {
-      console.log("TEST");
-      req.sendFile(path.resolve(__dirname, "client/build", "index.html"));
+      res.sendFile(path.resolve(__dirname, "client/build", "index.html"));
     };
 }
 
