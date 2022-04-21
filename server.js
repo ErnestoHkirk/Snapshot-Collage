@@ -36,5 +36,5 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
 
-//to run: node app.js
-//to run better: nodemon app.js
+//to run: node server.js
+//to run better: nodemon server.js
