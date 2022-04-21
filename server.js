@@ -9,7 +9,7 @@ const port = process.env.PORT || 5000;
 // app.get("/", (req, res) => {
 //   res.send("Hello World!");
 // });
-const path = require("path");
+import path from "path";
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
   app.get("*"),
