@@ -1,0 +1,26 @@
+/* [
+"#4ABDAC", 
+"#FC4A1A", 
+"#F7B733", 
+"#DFDCE3", 
+*/
+
+.display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 10px;
+}
+
+.display-list img {
+  width: 265px;
+  border-style: solid;
+  border: 1px;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 5vw;
+  color: #dfdce3;
+  text-decoration: none;
+}
