@@ -10,6 +10,14 @@ const port = process.env.PORT || 5000;
 //   res.send("Hello World!");
 // });
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("build"));
+  app.get("*"),
+    (req, res) => {
+      req.sendFile(path.resolve(__dirname, "build", "index.html"));
+    };
+}
+
 app.get("/fetch_image/*", async (req, res) => {
   console.log("/fetch_image endpoint called");
   const url =
