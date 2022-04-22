@@ -17,7 +17,8 @@ if (process.env.NODE_ENV === "production") {
   app.get("/"),
     (req, res) => {
       console.log("TEST1");
-      res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+      res.send("HELLO!");
+      //res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
     };
   app.get("/image-search"),
     (req, res) => {
