@@ -8,7 +8,7 @@ import { saveAs } from "file-saver";
 function DisplayPage(props) {
   let info = React.createRef();
 
-  var [collectionName, setName] = useState("my_collection");
+  var [collectionName, setName] = useState("");
 
   // function myConsole() {
   //   console.log(props.images);
@@ -37,7 +37,12 @@ function DisplayPage(props) {
         ] = `https://snapshot-collage-cors-proxy.herokuapp.com/${name}.png`)
     );
 
+    if (collectionName === "") {
+      setName("my_collection");
+    }
+
     var nombre = collectionName;
+    nombre = nombre.replace(/\s+/g, "_");
 
     compressed_img(urls, nombre);
     function compressed_img(urls, nombre) {
