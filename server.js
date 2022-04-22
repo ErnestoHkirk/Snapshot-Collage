@@ -20,6 +20,11 @@ if (process.env.NODE_ENV === "production") {
     };
 }
 
+app.get("/*"),
+  (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client/build", "index.html"));
+  };
+
 app.get("/fetch_image/*", async (req, res) => {
   console.log("/fetch_image endpoint called");
   const url =
