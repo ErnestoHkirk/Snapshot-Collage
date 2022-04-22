@@ -37,10 +37,6 @@ function DisplayPage(props) {
         ] = `https://snapshot-collage-cors-proxy.herokuapp.com/${name}.png`)
     );
 
-    if (collectionName === "") {
-      setName("my_collection");
-    }
-
     var nombre = collectionName;
     nombre = nombre.replace(/\s+/g, "_");
 
