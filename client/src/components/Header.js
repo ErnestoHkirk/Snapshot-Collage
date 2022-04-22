@@ -4,6 +4,11 @@ import "./Header.css";
 //import logo from "./images/collage-logo-v2.svg";
 import logo from "./images/vectorpaint.svg";
 
+function onClick() {
+  console.log("TEST");
+  fetch("/github/");
+}
+
 const Header = () => {
   return (
     <header>
@@ -31,9 +36,15 @@ const Header = () => {
         </ul>
       </nav>
       <div className="button-container">
-        <Link to="/contact" className="cta">
-          <button>Contact</button>
-        </Link>
+        <button>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="mailto:hooghkirk.e@gmail.com"
+          >
+            Contact
+          </a>
+        </button>
       </div>
     </header>
   );

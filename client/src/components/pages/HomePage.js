@@ -5,6 +5,7 @@ import library from "../images/TrinityLibrary.jpg";
 import test from "../images/photographs.jpg";
 import test2 from "../images/sample-collage.jpg";
 import jurrasic from "../images/jurrasic-park-wide.jpg";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   let navigate = useNavigate();
@@ -120,7 +121,14 @@ function HomePage() {
             If you would like to learn about how this site was made, feel free
             to click here.
           </p>
-          <div className="ui large button">Github Repository</div>
+          <a
+            className="ui large button"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/ErnestoHkirk/Snapshot-Collage"
+          >
+            Github Repository
+          </a>
         </div>
       </div>
     </div>
