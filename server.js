@@ -14,7 +14,7 @@ const __dirname = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
-  app.get("/*"),
+  app.get("/"),
     (req, res) => {
       console.log("TEST1");
       res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
@@ -22,7 +22,8 @@ if (process.env.NODE_ENV === "production") {
   app.get("/image-search"),
     (req, res) => {
       console.log("TEST2");
-      res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+      res.send("broke!");
+      //res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
     };
 }
 
