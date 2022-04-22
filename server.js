@@ -42,11 +42,14 @@ if (process.env.NODE_ENV === "production") {
 app.get("/fetch_image/*", async (req, res) => {
   console.log("/fetch_image endpoint called");
   const url =
-    "https://www.qwant.com/?t=images&q=" + req.query.search + "&size=medium";
+    "https://www.qwant.com/?t=images&q=" +
+    req.query.search +
+    "&size=medium&s=2";
   const options = {
     method: "GET",
   };
   console.log(req.query.search);
+  console.log(url);
 
   const response = await fetch(url, options)
     .then((res) => res.text())
