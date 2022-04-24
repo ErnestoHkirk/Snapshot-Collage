@@ -8,20 +8,10 @@
 "#DFDCE3", 
 */
 
-/* body {
-   background: linear-gradient(#24305e, #374785, #a8d0e6, #374785, #24305e); 
-} */
-
-/* ["#1F4B99", "#6B9FA1", "#FFE39F", "#D78742", "#9E2B0E"] */
-
 .logo {
   height: 60px;
   cursor: pointer;
 }
-
-/* .button-container a {
-  color: #dfdce3;
-} */
 
 .logo-combined a {
   padding: 5px 2px;
