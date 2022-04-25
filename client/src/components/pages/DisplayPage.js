@@ -10,11 +10,6 @@ function DisplayPage(props) {
 
   var [collectionName, setName] = useState("");
 
-  // function myConsole() {
-  //   console.log(props.images);
-  // }
-  // <button onClick={myConsole}></button>
-
   function onSubmit(param) {
     info.current.style.padding = "50px";
     setName("My " + param + " collage");
@@ -23,6 +18,7 @@ function DisplayPage(props) {
   function download() {
     //console.log("downloading..");
 
+    // Test data
     // var urls = [
     //   "https://cors-anywhere.herokuapp.com/https://s2.qwant.com/thumbr/474x422/c/0/34ad27f38ae93c3494720b3c94b0b84488f82101f1e1293a5eac1f004ccad7/th.jpg?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.bWN7-RzjOnrHVNgfuDWUjQHaGm%26pid%3DApi&q=0&b=1&p=0&a=0.png",
     //   "https://cors-anywhere.herokuapp.com/https://pngimage.net/wp-content/uploads/2018/06/react-icon-png-7.png",
